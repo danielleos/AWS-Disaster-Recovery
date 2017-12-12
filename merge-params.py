@@ -1,4 +1,3 @@
-
 import yaml
 from itertools import izip
 
