@@ -24,7 +24,7 @@ RoleParams:
       DBAllocatedStorage: 250
       DBIops: 1000
       DBLowStorageThreshold: 50
-   ec2-mno:
+   ec2-abc:
       StackCount: 2
       InstanceType: m4.2xlarge
       ImageId: ami-b2296003
