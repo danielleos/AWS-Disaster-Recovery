@@ -1,7 +1,7 @@
 RoleParams:
-   asg-bst:
-      ImageId: ami-02ace571
-   ecs-mas:
-      ImageId: ami-95f8d3f3
-   ec2-wsm:
-      ImageId: ami-b22960c1
+   asg-abc:
+      ImageId: ami-02ace001
+   ecs-abc:
+      ImageId: ami-95f8d002
+   ec2-abc:
+      ImageId: ami-b2296003
