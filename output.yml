@@ -1,175 +1,68 @@
-BaseParams:
-   AccountId: 175616551101
-   AZ1Id: a
-   AZ2Id: b
-   AppPrivateSubnetCidrA: 100.66.48.0/25
-   AppPrivateSubnetCidrB: 100.66.48.128/25
-   BastionAccessCidr1: 85.255.233.218/32
-   BastionAccessCidr2: 212.183.131.192/28
-   BastionAccessCidr3: 125.22.193.145/28
-   BastionAccessCidr4: 144.36.250.66/32
-   BastionAccessCidr5: 170.251.192.190/32
-   BastionAccessCidr6: 170.251.196.167/32
-   BastionAccessCidr7: 122.98.56.17/32
-   BastionAccessCidr8: 5.71.175.157/32
-   BastionAccessCidr9: 5.71.175.157/32
-   BastionPublicSubnetCidrA: 100.66.49.192/28
-   BastionPublicSubnetCidrB: 100.66.49.208/28
-   CustomerBgpAsn: 3209
-   CustomerCidr1: 47.73.72.176/28
-   CustomerCidr2: 195.233.98.0/23
-   CustomerCidr3: 195.233.197.0/24
-   CustomerCidr4: 195.233.96.0/25
-   CustomerCidr5: 47.73.16.0/22
-   CustomerCidr6: 195.233.64.0/26
-   CustomerCidr7: 195.233.65.168/29
-   CustomerCidr8: 195.233.66.128/26
-   ElbAPXAccessCidr01: 195.233.96.53/32
-   ElbWSMAccessCidr01: 195.233.96.53/32
-   ElbWSDAccessCidr01: 195.233.96.53/32
-   CustomerGatewayIp1: 85.205.30.150
-   CustomerGatewayName1: london-telehouse-north
-   CustomerGatewayIp2: 85.205.30.151
-   CustomerGatewayName2: london-telehouse-city
-   DBBackupRetentionPeriod: 30
-   DBEngineVersion: 12.1.0.2.v6
-   DBMultiAZ: true
-   DBPrivateSubnetCidrA: 100.66.49.64/26
-   DBPrivateSubnetCidrB: 100.66.49.128/26
-   DBSnapshotIdentifier: ''
-   ElbSubnetCidrA: 100.66.51.0/26
-   ElbSubnetCidrB: 100.66.51.64/26
-   KeyName: digitalx-prod
-   HostedZoneSuffix: svc.vodafoneaws.co.uk
-   ManagementCidr: 109.149.38.246/32
-   PrivateHostedZoneName: local
-   PublicSubnetCidrA: 100.66.49.0/27
-   PublicSubnetCidrB: 100.66.49.32/27
-   Region: eu-west-1
-   SnsEmailEndpoint: c.reddy.yakkaty@accenture.com
-   VpcCidr: 100.66.48.0/22
-   CloudWatchLogsRetentionInDays: 14
+# Example File
 
 RoleParams:
-   asg-bst:
+   asg-abc:
       StackCount: 2
-      ImageId: ami-02ace571
+      ImageId: ami-02ace001
       InstanceType: t2.medium
       HostnamePrefix: bastion
-   ecs-mas:
-      ImageId: ami-95f8d3f3
+   ecs-abc:
+      ImageId: ami-95f8d002
       InstanceType: c4.xlarge
       MinSize: 4
       MaxSize: 24
       DesiredCapacity: 4
-   rds-wdb:
-      DBMasterUserPassword: bVLSr8fsH8o73Fd5
+   rds-abc:
+      DBMasterUserPassword: passwordEXample
       DBInstanceClass: db.m4.2xlarge
       DBAllocatedStorage: 500
       DBIops: 2000
       DBLowStorageThreshold: 100
-   rds-ddb:
-      DBMasterUserPassword: w2f7T3LtyAtrX62Q
+   rds-abc:
+      DBMasterUserPassword: anotherPassWord
       DBInstanceClass: db.m4.2xlarge
       DBAllocatedStorage: 250
       DBIops: 1000
       DBLowStorageThreshold: 50
-   ec2-wsm:
+   ec2-mno:
       StackCount: 2
       InstanceType: m4.2xlarge
-      ImageId: ami-b22960c1
+      ImageId: ami-b2296003
       RootVolumeSize: 30
       DataVolumeSize: 250
-   ec2-wsd:
+   ec2-jkl:
       StackCount: 2
       InstanceType: m4.2xlarge
-      ImageId: ami-b22961c1
+      ImageId: ami-b2296004
       RootVolumeSize: 30
       DataVolumeSize: 250
-   ec2-wcm:
+   ec2-ghi:
       StackCount: 2
       InstanceType: m4.2xlarge
-      ImageId: ami-b22961c1
+      ImageId: ami-b2296005
       RootVolumeSize: 30
       DataVolumeSize: 200
-   ec2-wcd:
+   ec2-def:
       StackCount: 4
       InstanceType: m4.2xlarge
-      ImageId: ami-b22961c1
+      ImageId: ami-b2296006
       RootVolumeSize: 30
       DataVolumeSize: 200
-   ec2-apx:
+   ec2-pqr:
       StackCount: 2
       InstanceType: m4.xlarge
-      ImageId: ami-b990d8ca
+      ImageId: ami-b990d007
       RootVolumeSize: 30
       DataVolumeSize: 100
-   ec2-sol:
+   ec2-stu:
       StackCount: 4
       InstanceType: m4.2xlarge
-      ImageId: ami-b22961c1
+      ImageId: ami-b2296008
       RootVolumeSize: 30
       DataVolumeSize: 100
-   ec2-coh:
+   ec2-vwx:
       StackCount: 8
       InstanceType: m4.xlarge
-      ImageId: ami-b22961c1
+      ImageId: ami-b2296009
       RootVolumeSize: 30
       DataVolumeSize: 50
-   ec2-jen:
-      StackCount: 2
-      InstanceType: t2.large
-      ImageId: ami-b22961c1
-      RootVolumeSize: 30
-      DataVolumeSize: 50
-   ec2-nex:
-      StackCount: 1
-      InstanceType: t2.large
-      ImageId: ami-b22961c1
-      RootVolumeSize: 30
-      DataVolumeSize: 50
-   ec2-chf:
-      StackCount: 1
-      InstanceType: t2.large
-      ImageId: ami-b22961c1
-      RootVolumeSize: 30
-      DataVolumeSize: 50
-   ec2-zkp:
-      StackCount: 2
-      InstanceType: m4.large
-      ImageId: ami-b22961c1
-      RootVolumeSize: 30
-      DataVolumeSize: 50
-   ec2-kaf:
-      StackCount: 2
-      InstanceType: m4.xlarge
-      ImageId: ami-b22961c1
-      RootVolumeSize: 30
-      DataVolumeSize: 50
-   elb-wsm:
-      InstancePort: 8080
-      HealthCheckTarget: http:8080/index.html
-   elb-zkp:
-      InstancePort: 2181
-      HealthCheckTarget: http:2181/index.html
-   elb-kaf:
-      InstancePort: 9092
-      HealthCheckTarget: http:9092/index.html
-   elb-wsd:
-      InstancePort: 8080
-      HealthCheckTarget: http:8080/index.html
-   elb-wcm:
-      InstancePort: 8040
-      HealthCheckTarget: tcp:8040
-   elb-wcd:
-      InstancePort: 8050
-      HealthCheckTarget: tcp:8050
-   elb-coh:
-      InstancePort: 8088
-      HealthCheckTarget: tcp:8088
-   elb-apx:
-      InstancePort: 6180
-      HealthCheckTarget: tcp:6180
-   elb-yth:
-      InstancePort: 80
-      HealthCheckTarget: tcp:80
